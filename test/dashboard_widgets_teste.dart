@@ -17,4 +17,14 @@ void main() {
     final firstFeature = find.byType(FeatureItem);
     expect(firstFeature, findsWidgets);
   });
+
+  final iconTransferFeatureItem = find.widgetWithIcon(FeatureItem, Icons.monetization_on);
+  expect(iconTransferFeatureItem, findsOneWidget);
+  final nameTransferFeatureItem = find.widgetWithText(FeatureItem, 'Transfer');
+  expect(nameTransferFeatureItem, findsOneWidget);
+
+  final iconTransactionFeedFeatureItem = find.widgetWithIcon(FeatureItem, Icons.description);
+  expect(iconTransactionFeedFeatureItem, findsOneWidget);
+  final nameTransactionFeedFeatureItem = find.widgetWithText(FeatureItem, 'Transaction Feed');
+  expect(nameTransactionFeedFeatureItem, findsOneWidget);
 }

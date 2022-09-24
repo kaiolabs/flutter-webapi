@@ -6,4 +6,7 @@ void main() {
     final transaction = Transaction(null, 200, null);
     expect(transaction.value, 200);
   });
+  test('Shold show the error message when create a transaction with value less than zero', () {
+    expect(() => Transaction(null, -200, null), throwsAssertionError);
+  });
 }
